@@ -1,7 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+
     id("com.google.devtools.ksp") version "2.1.0-1.0.29"
+    id("org.jetbrains.kotlin.plugin.compose") version "2.0.0"
 
 }
 
@@ -72,8 +74,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     val room_version = "2.6.1"
 
-    implementation("androidx.room:room-runtime:$room_version")
+    implementation(libs.androidx.room.runtime)
     implementation(kotlin("stdlib-jdk8"))
-    implementation("com.google.dagger:dagger-compiler:2.51.1")
-    ksp("com.google.dagger:dagger-compiler:2.51.1")
+    implementation(libs.google.dagger.compiler)
+    ksp(libs.google.dagger.compiler)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
 }
