@@ -120,11 +120,16 @@ fun NoteItem(state: NoteState, index: Int, onEvent: (NotesEvent) -> Unit) {
                 color = Color.White
             )
         }
-        Icon(
-            imageVector = Icons.Rounded.Delete,
-            contentDescription = null,
-            modifier = Modifier.size(35.dp)
-        )
+        IconButton(onClick = { onEvent(NotesEvent.DeleteNote(
+            state.notes.get(index = index)
+        )) }) {
+            Icon(
+                imageVector = Icons.Rounded.Delete,
+                contentDescription = null,
+                modifier = Modifier.size(35.dp)
+            )
+
+        }
 
     }
 }
