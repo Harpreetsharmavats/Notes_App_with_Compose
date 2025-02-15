@@ -21,7 +21,7 @@ import com.example.notesappwithcompose.Presentation.NotesEvent
 
 
 @Composable
-fun NoteScreen(
+fun AddNoteScreen(
     navController: NavController,
     state: NoteState,
     modifier: Modifier,

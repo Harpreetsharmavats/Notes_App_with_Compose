@@ -61,7 +61,7 @@ fun NoteScreen(
                     Icon(
                         imageVector = Icons.Rounded.List, contentDescription = null,
                         modifier = Modifier.size(35.dp),
-                        tint = Pink80
+                        tint = Color.White
                     )
                 }
             }
