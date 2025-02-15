@@ -44,7 +44,7 @@ fun NoteScreen(
     ) { paddingValues ->
 
 
-        Column(modifier = Modifier.fillMaxSize().padding(paddingValues)) {
+        Column(modifier.fillMaxSize().padding(paddingValues)) {
             OutlinedTextField(
                 value = state.title.value, onValueChange = {
                     state.title.value = it
